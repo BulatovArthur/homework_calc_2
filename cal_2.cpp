@@ -8,8 +8,18 @@ using namespace std;
 int ADD(int a, int b) { return a + b; }
 int SUB(int a, int b) { return a - b; }
 int MUL(int a, int b) { return a * b; }
-int DIV(double a, double b) { return a / b; }
-int MOD(int a, int b) { return (a % b); }
+double DIV(double a, int b) 
+{
+  double rez;
+  rez = a / b;
+  return rez;
+}
+int MOD(int a, int b) {
+  cout << "Module" << endl;
+  int t;
+  cin >> t;
+  return ((a - b) % t);
+}
 int OR(int a, int b) { return a & b; }
 int ROR(int a) { return a >> 1; }
 int ROL(int a) { return a << 1; }
@@ -51,7 +61,7 @@ int main() {
         break;
       case '/':
         if (b != 0)
-          cout << DIV(a, b) << endl;
+          cout << DIV(double(a), b) << endl;
         else
           cerr << "Error!" << endl;
         break;
