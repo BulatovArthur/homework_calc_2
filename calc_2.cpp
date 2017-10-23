@@ -114,7 +114,7 @@ int main() {
        cout << ROR(a) << endl;
        break;
      case '!':
-       cout << NOT(!a) << endl;
+       cout << NOT(a) << endl;
        break;
      case '|':
        cout << AND(a, b) << endl;
